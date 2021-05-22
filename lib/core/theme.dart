@@ -3,10 +3,10 @@ import 'package:flutter/services.dart';
 
 class AppThemes {
   static const borderRadius = 6.0;
-  static const primaryColor = Color(0xff81bc4b);
-  static const primaryColorLight = Color(0xFF9ECC73);
-  static final accentColor = Color(0xffF47621);
-  static const accentColorLight = Color(0xFFEC8A49);
+  static const primaryColor = Color(0xffc07837);
+  static const primaryColorLight = Color(0xffc07837);
+  static final accentColor = Color(0xffF9D7CA);
+  static const accentColorLight = Color(0xffF9D7CA);
   static const errorColor = Colors.red;
 
   static final ColorScheme lightColorScheme = ColorScheme.light().copyWith(
@@ -17,10 +17,11 @@ class AppThemes {
       surface: Colors.white);
 
   static final ColorScheme darkColorScheme = ColorScheme.dark().copyWith(
-    primary: primaryColor,
-    secondary: accentColor,
-    error: errorColor,
-  );
+      primary: primaryColor,
+      secondary: accentColor,
+      error: errorColor,
+      background: Color(0xFF231F1E),
+      surface: Colors.black26);
 
   static TextTheme globalTextTheme(ThemeData theme) {
     var txtTheme = theme.textTheme;
@@ -40,12 +41,12 @@ class AppThemes {
           textTheme: globalTextTheme(ThemeData.light()),
           inputDecorationTheme: InputDecorationTheme()
               .copyWith(isDense: true, border: OutlineInputBorder()),
-          appBarTheme: ThemeData.light().appBarTheme.copyWith(
-              textTheme: globalTextTheme(ThemeData.light()),
-              color: Colors.white,
-              elevation: 1,
-              iconTheme: IconThemeData(color: Colors.grey.shade700),
-              brightness: Brightness.light),
+          // appBarTheme: ThemeData.light().appBarTheme.copyWith(
+          //     textTheme: globalTextTheme(ThemeData.light()),
+          //     color: Colors.white,
+          //     elevation: 1,
+          //     iconTheme: IconThemeData(color: Colors.grey.shade700),
+          //     brightness: Brightness.light),
           cardTheme: CardTheme(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(12)))));
@@ -62,12 +63,12 @@ class AppThemes {
           accentColor: accentColor,
           inputDecorationTheme: InputDecorationTheme()
               .copyWith(isDense: true, border: OutlineInputBorder()),
-          appBarTheme: ThemeData.dark().appBarTheme.copyWith(
-              textTheme: globalTextTheme(ThemeData.dark()),
-              color: Colors.black,
-              elevation: 1,
-              iconTheme: IconThemeData(color: Colors.grey),
-              brightness: Brightness.dark),
+          // appBarTheme: ThemeData.dark().appBarTheme.copyWith(
+          //     textTheme: globalTextTheme(ThemeData.dark()),
+          //     color: Colors.black,
+          //     elevation: 1,
+          //     iconTheme: IconThemeData(color: Colors.grey),
+          //     brightness: Brightness.dark),
           cardTheme: CardTheme(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(12)))));

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'core/constants.dart';
-import 'pages/home_page.dart';
+import 'core/routes.dart';
 import 'pages/shared/page_404.dart';
 
 void main() async {
@@ -17,11 +17,9 @@ void main() async {
     popGesture: Get.isPopGestureEnable,
     title: AppConstants.SITE_NAME,
     theme: AppThemes.lightTheme,
-    darkTheme: AppThemes.darkTheme,
+    darkTheme: AppThemes.lightTheme,
     unknownRoute: GetPage(name: '/not-found', page: () => Page404()),
     initialRoute: '/',
-    getPages: [
-      GetPage(name: '/', page: () => HomePage(title: 'Flutter Demo Home Page')),
-    ],
+    getPages: AppRoutes.routes,
   ));
 }
