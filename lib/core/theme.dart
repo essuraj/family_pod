@@ -35,6 +35,7 @@ class AppThemes {
       .copyWith(
           splashColor: primaryColor.withOpacity(0.2),
           colorScheme: lightColorScheme,
+          visualDensity: VisualDensity.compact,
           primaryColor: primaryColor,
           toggleableActiveColor: primaryColor,
           accentColor: accentColor,
@@ -56,6 +57,7 @@ class AppThemes {
           textTheme: globalTextTheme(ThemeData.dark()))
       .copyWith(
           colorScheme: darkColorScheme,
+          visualDensity: VisualDensity.compact,
           textTheme: globalTextTheme(ThemeData.dark()),
           splashColor: primaryColor.withOpacity(0.2),
           primaryColor: primaryColor,

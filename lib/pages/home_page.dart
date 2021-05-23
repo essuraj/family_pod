@@ -1,6 +1,6 @@
 import 'package:family_pod/core/constants.dart';
 import 'package:family_pod/core/routes.dart';
-import 'package:family_pod/widgets/add_member.dart';
+import 'package:family_pod/widgets/list_members.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -11,6 +11,19 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
+  Widget getTab() {
+    switch (_selectedIndex) {
+      case 0:
+        return Text('selectedIndex: $_selectedIndex');
+
+      case 1:
+        return ListMembers();
+      default:
+        return Container(
+          child: Text("Unknown Tab"),
+        );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -30,36 +43,31 @@ class _HomePageState extends State<HomePage> {
             labelType: NavigationRailLabelType.selected,
             destinations: <NavigationRailDestination>[
               NavigationRailDestination(
-                icon: Icon(Icons.favorite_border),
-                selectedIcon: Icon(Icons.favorite),
-                label: Text('First'),
+                icon: Icon(Icons.home),
+                // selectedIcon: Icon(Icons.home_filled),
+                label: Text('Home'),
               ),
               NavigationRailDestination(
-                icon: Icon(Icons.bookmark_border),
-                selectedIcon: Icon(Icons.book),
-                label: Text('Second'),
-              ),
-              NavigationRailDestination(
-                icon: Icon(Icons.star_border),
-                selectedIcon: Icon(Icons.star),
-                label: Text('Third'),
+                icon: Icon(Icons.group_outlined),
+                // selectedIcon: Icon(Icons.group_outlined),
+                label: Text('Family'),
               ),
             ],
           ),
           const VerticalDivider(thickness: 1, width: 1),
           // This is the main content.
           Expanded(
-            child: Center(
-              child: Text('selectedIndex: $_selectedIndex'),
+            child: Container(
+              child: getTab(),
             ),
           )
         ],
       ),
-      floatingActionButton: FloatingActionButton.extended(
-          onPressed: () {
-            Get.toNamed(RouteNames.addMemberPage);
-          },
-          label: Text("Add a new family member")),
+      // floatingActionButton: FloatingActionButton.extended(
+      //     onPressed: () {
+      //       Get.toNamed(RouteNames.addMemberPage);
+      //     },
+      //     label: Text("Add a new family member")),
     );
   }
 }

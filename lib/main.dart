@@ -1,4 +1,5 @@
 import 'package:family_pod/core/theme.dart';
+import 'package:family_pod/models/db/db.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -6,8 +7,10 @@ import 'core/constants.dart';
 import 'core/routes.dart';
 import 'pages/shared/page_404.dart';
 
+late DB db;
+
 void main() async {
-  // await GetStorage.init();
+  db = DB();
 
   runApp(GetMaterialApp(
     enableLog: true,
