@@ -1,6 +1,7 @@
 import 'package:family_pod/core/constants.dart';
 import 'package:family_pod/core/routes.dart';
 import 'package:family_pod/widgets/list_members.dart';
+import 'package:family_pod/widgets/sample_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -14,7 +15,7 @@ class _HomePageState extends State<HomePage> {
   Widget getTab() {
     switch (_selectedIndex) {
       case 0:
-        return Text('selectedIndex: $_selectedIndex');
+        return TreeViewPage();
 
       case 1:
         return ListMembers();

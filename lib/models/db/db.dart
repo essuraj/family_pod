@@ -22,7 +22,7 @@ LazyDatabase _openConnection() {
   });
 }
 
-@UseMoor(tables: [Members])
+@UseMoor(tables: [Members, MemberImages, Events, Relationships])
 class DB extends _$DB {
   // we tell the database where to store the data with this constructor
   DB() : super(_openConnection());
