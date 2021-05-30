@@ -57,19 +57,6 @@ class _TreeViewPageState extends State<TreeViewPage> {
 
   @override
   void initState() {
-    // final node1 = Node.Id(1);
-    // final node2 = Node.Id(2);
-    // final node3 = Node.Id(3);
-    // graph.addEdge(node1, node2);
-    // graph.addEdge(
-    //   node1,
-    //   node3,
-    // );
-    // graph.addEdge(
-    //   node2,
-    //   node3,
-    // );
-
     WidgetsBinding.instance!.addPostFrameCallback((_) {
       // executes after build
       getMembers();

@@ -20,7 +20,7 @@ void main() async {
     popGesture: Get.isPopGestureEnable,
     title: AppConstants.SITE_NAME,
     theme: AppThemes.lightTheme,
-    darkTheme: AppThemes.lightTheme,
+    darkTheme: AppThemes.darkTheme,
     unknownRoute: GetPage(name: '/not-found', page: () => Page404()),
     initialRoute: '/',
     getPages: AppRoutes.routes,
