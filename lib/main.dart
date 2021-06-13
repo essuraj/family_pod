@@ -18,7 +18,7 @@ void main() async {
     defaultTransition: Transition.native,
     opaqueRoute: Get.isOpaqueRouteDefault,
     popGesture: Get.isPopGestureEnable,
-    title: AppConstants.SITE_NAME,
+    title: AppConstants.appName,
     theme: AppThemes.lightTheme,
     darkTheme: AppThemes.darkTheme,
     unknownRoute: GetPage(name: '/not-found', page: () => Page404()),

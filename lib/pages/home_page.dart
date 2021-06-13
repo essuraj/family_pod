@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppConstants.SITE_NAME),
+        title: Text(AppConstants.appName),
       ),
       body: Row(
         children: <Widget>[

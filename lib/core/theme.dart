@@ -5,22 +5,23 @@ class AppThemes {
   static const borderRadius = 6.0;
   static const primaryColor = Color(0xffc07837);
   static const primaryColorLight = Color(0xffc07837);
-  static final accentColor = Color(0xffF9D7CA);
+  static var accentColor = const Color(0xffF9D7CA);
   static const accentColorLight = Color(0xffF9D7CA);
   static const errorColor = Colors.red;
 
-  static final ColorScheme lightColorScheme = ColorScheme.light().copyWith(
-      primary: primaryColor,
-      secondary: accentColor,
-      error: errorColor,
-      background: Colors.grey.shade100,
-      surface: Colors.white);
+  static final ColorScheme lightColorScheme = const ColorScheme.light()
+      .copyWith(
+          primary: primaryColor,
+          secondary: accentColor,
+          error: errorColor,
+          background: Colors.grey.shade100,
+          surface: Colors.white);
 
-  static final ColorScheme darkColorScheme = ColorScheme.dark().copyWith(
+  static final ColorScheme darkColorScheme = const ColorScheme.dark().copyWith(
       primary: primaryColor,
       secondary: accentColor,
       error: errorColor,
-      background: Color(0xFF231F1E),
+      background: const Color(0xFF231F1E),
       surface: Colors.black26);
 
   static TextTheme globalTextTheme(ThemeData theme) {
@@ -40,15 +41,15 @@ class AppThemes {
           toggleableActiveColor: primaryColor,
           accentColor: accentColor,
           textTheme: globalTextTheme(ThemeData.light()),
-          inputDecorationTheme: InputDecorationTheme()
-              .copyWith(isDense: true, border: OutlineInputBorder()),
+          inputDecorationTheme: const InputDecorationTheme()
+              .copyWith(isDense: true, border: const OutlineInputBorder()),
           // appBarTheme: ThemeData.light().appBarTheme.copyWith(
           //     textTheme: globalTextTheme(ThemeData.light()),
           //     color: Colors.white,
           //     elevation: 1,
           //     iconTheme: IconThemeData(color: Colors.grey.shade700),
           //     brightness: Brightness.light),
-          cardTheme: CardTheme(
+          cardTheme: const CardTheme(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(12)))));
 
@@ -63,15 +64,15 @@ class AppThemes {
           primaryColor: primaryColor,
           toggleableActiveColor: primaryColor,
           accentColor: accentColor,
-          inputDecorationTheme: InputDecorationTheme()
-              .copyWith(isDense: true, border: OutlineInputBorder()),
+          inputDecorationTheme: const InputDecorationTheme()
+              .copyWith(isDense: true, border: const OutlineInputBorder()),
           // appBarTheme: ThemeData.dark().appBarTheme.copyWith(
           //     textTheme: globalTextTheme(ThemeData.dark()),
           //     color: Colors.black,
           //     elevation: 1,
           //     iconTheme: IconThemeData(color: Colors.grey),
           //     brightness: Brightness.dark),
-          cardTheme: CardTheme(
+          cardTheme: const CardTheme(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(12)))));
 

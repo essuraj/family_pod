@@ -11,6 +11,6 @@ class AppRoutes {
 }
 
 class RouteNames {
-  static final rootPage = "/";
-  static final addMemberPage = "/members/add";
+  static var rootPage = "/";
+  static var addMemberPage = "/members/add";
 }
